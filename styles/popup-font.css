@@ -1,0 +1,157 @@
+/* Lantern District: popup typography and the Explorer. Icons retain their own font. */
+.monaco-workbench .quick-input-widget {
+  font-family: 'Cascadia Code', 'JetBrains Mono', Menlo, monospace !important;
+  font-size: 16px;
+  font-weight: 400;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: 'calt' 1, 'liga' 1;
+  letter-spacing: 0;
+}
+
+.monaco-workbench .quick-input-widget .quick-input-box input,
+.monaco-workbench .quick-input-widget .monaco-highlighted-label,
+.monaco-workbench .quick-input-widget .monaco-icon-name-container,
+.monaco-workbench .quick-input-widget .label-name,
+.monaco-workbench .quick-input-widget .label-description,
+.monaco-workbench .quick-input-widget .quick-input-list-label-meta,
+.monaco-workbench .quick-input-widget .quick-input-list-separator,
+.monaco-workbench .quick-input-widget .quick-input-title,
+.monaco-workbench .quick-input-widget .quick-input-description,
+.monaco-workbench .quick-input-widget .monaco-keybinding-key {
+  font-family: 'Cascadia Code', 'JetBrains Mono', Menlo, monospace !important;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: 'calt' 1, 'liga' 1;
+}
+
+.monaco-workbench .quick-input-widget .quick-input-box input,
+.monaco-workbench .quick-input-widget .label-name {
+  font-size: 16px !important;
+}
+
+/* Keep native virtual-list row heights: larger text must not overlap rows. */
+.monaco-workbench .quick-input-widget .quick-input-list {
+  line-height: 22px;
+}
+
+/* Midnight dispatch: native 22px tree rows, no extra gaps or separators. */
+.monaco-workbench .part.sidebar .explorer-folders-view {
+  background-image: radial-gradient(ellipse at 0 0, #7DDCE908, transparent 55%);
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-icon-label .label-name,
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-icon-label .label-description {
+  font-family: 'Cascadia Code', 'JetBrains Mono', Menlo, monospace !important;
+  font-size: 14px !important;
+  letter-spacing: -0.15px;
+  font-variant-ligatures: common-ligatures contextual;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .folder-icon .label-name {
+  font-weight: 600;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-tl-twistie {
+  color: #60758E;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-icon-label::before {
+  background-size: 18px !important;
+  width: 18px !important;
+  padding-right: 7px;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .explorer-item {
+  margin: 0 5px 0 2px;
+  border-radius: 5px;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.selected,
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row:hover,
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.focused {
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row:hover .explorer-item {
+  background-color: #7DDCE908;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.selected .explorer-item {
+  background: linear-gradient(90deg, #F2AB7924, #7DDCE912 72%, #7DDCE906);
+  box-shadow: inset 2px 0 #F2AB79;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.selected .label-name {
+  color: #F4DFC2 !important;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.focused:not(.selected) .explorer-item {
+  background-color: #7DDCE910;
+  box-shadow: inset 2px 0 #7DDCE9;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list:focus .monaco-list-row.focused.selected .explorer-item {
+  box-shadow: inset 2px 0 #7DDCE9;
+}
+
+.monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.selected .monaco-tl-twistie {
+  color: #F2AB79;
+}
+
+/* A small lantern light identifies the workspace; the actual name stays intact. */
+.monaco-workbench .part.sidebar > .title > .title-label h2 {
+  font-family: 'Cascadia Code', 'JetBrains Mono', Menlo, monospace !important;
+  font-size: 12px !important;
+  font-weight: 600;
+  letter-spacing: 1.15px;
+  color: #E8C18F;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.monaco-workbench .part.sidebar > .title > .title-label h2::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  flex: 0 0 5px;
+  border-radius: 50%;
+  background-color: #F2AB79;
+  box-shadow: 0 0 7px #F2AB7955;
+}
+
+.monaco-workbench .part.sidebar > .title .title-actions .action-label {
+  color: #6F849D;
+}
+
+/* Top navigation uses a quiet pool of cyan light instead of an underline. */
+.monaco-workbench .part.sidebar .composite-bar .action-item.checked .active-item-indicator {
+  position: absolute;
+  left: 3px !important;
+  right: 3px !important;
+  top: 4px !important;
+  bottom: 4px !important;
+  width: auto !important;
+  height: auto !important;
+  transform: none !important;
+  border-radius: 7px;
+  background: linear-gradient(145deg, #7DDCE923, #7DDCE907);
+  pointer-events: none;
+}
+
+.monaco-workbench .part.sidebar .composite-bar .action-item.checked .active-item-indicator::before {
+  border: 0 !important;
+}
+
+.monaco-workbench .part.sidebar .composite-bar .action-item:focus-visible .active-item-indicator {
+  outline: 1px solid #7DDCE9;
+  outline-offset: -1px;
+}
+
+.monaco-workbench .part.sidebar .composite-bar .action-item.checked .action-label {
+  color: #9DEAF2 !important;
+}
+
+.monaco-workbench .part.sidebar .composite-bar .action-item.checked .action-label::before {
+  text-shadow: 0 0 8px #7DDCE940;
+}

@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "charliermarsh.ruff",
+    "ms-dotnettools.csdevkit",
+    "ms-dotnettools.csharp",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "JetBrains.kotlin-server",
+    "redhat.java",
+    "vscjava.vscode-gradle",
+    "vscjava.vscode-java-debug",
+    "nisargjhaveri.android-debug",
+    "AshishKumarD.logcat-lens"
+  ]
+}

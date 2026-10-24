@@ -1,0 +1,166 @@
+{
+  "workbench.colorTheme": "Lantern District",
+  "workbench.iconTheme": "lantern-district-icons",
+  "workbench.preferredDarkColorTheme": "Lantern District",
+  "window.autoDetectColorScheme": false,
+  "window.titleBarStyle": "custom",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "left",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.editor.tabSizing": "fit",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.labelFormat": "default",
+  "workbench.tree.indent": 14,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "none",
+  "breadcrumbs.enabled": false,
+  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', Menlo, monospace",
+  "editor.fontSize": 16,
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 23,
+  "editor.letterSpacing": 0,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "on",
+  "editor.lineNumbersMinChars": 3,
+  "editor.glyphMargin": true,
+  "editor.padding.top": 10,
+  "editor.padding.bottom": 10,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "block",
+  "editor.cursorWidth": 2,
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "selection",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.scrollbar.horizontalScrollbarSize": 8,
+  "editor.overviewRulerBorder": false,
+  "editor.stickyScroll.enabled": false,
+  "terminal.integrated.fontFamily": "'Cascadia Code NF', 'JetBrainsMono Nerd Font', 'Cascadia Code', monospace",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.25,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.tabs.enabled": true,
+  "workbench.experimental.modernUI": false,
+  "window.density.editorTabHeight": "compact",
+  "editor.suggestFontSize": 16,
+  "editor.suggestLineHeight": 24,
+  "editor.inlayHints.fontSize": 13,
+  "debug.console.fontSize": 16,
+  "debug.console.fontFamily": "'Cascadia Code', 'JetBrains Mono', Menlo, monospace",
+  "workbench.colorCustomizations": {
+    "[Lantern District]": {
+      "quickInput.background": "#0A101B",
+      "quickInput.foreground": "#D9E2F0",
+      "quickInputTitle.background": "#0A101B",
+      "quickInputList.focusBackground": "#1D2C40",
+      "quickInputList.focusForeground": "#E3EDF7",
+      "quickInputList.focusIconForeground": "#7DDCE9",
+      "quickInputList.focusHighlightForeground": "#F2AB79",
+      "pickerGroup.border": "#00000000",
+      "pickerGroup.foreground": "#86ACBD",
+      "input.background": "#0D1522",
+      "input.border": "#26394D",
+      "input.foreground": "#D9E2F0",
+      "input.placeholderForeground": "#91A0B8",
+      "focusBorder": "#51738F",
+      "widget.border": "#182536",
+      "widget.shadow": "#00000099",
+      "keybindingLabel.background": "#141F2D",
+      "keybindingLabel.foreground": "#9AAFC5",
+      "keybindingLabel.border": "#00000000",
+      "keybindingLabel.bottomBorder": "#00000000"
+    }
+  },
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.clang_format_style": "file",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "cmake.useCMakePresets": "auto",
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true
+  },
+  "[cuda-cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[kotlin]": {
+    "editor.defaultFormatter": "JetBrains.kotlin-server",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+  "java.jdt.ls.kotlinSupport.enabled": false,
+  "java.import.gradle.wrapper.enabled": true,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.inlineSuggest.suppressSuggestions": false
+}

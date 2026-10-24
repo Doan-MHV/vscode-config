@@ -1,0 +1,487 @@
+{
+  "iconDefinitions": {
+    "android": {
+      "iconPath": "./android.svg"
+    },
+    "android-folder": {
+      "iconPath": "./android-folder.svg"
+    },
+    "android-folder-open": {
+      "iconPath": "./android-folder-open.svg"
+    },
+    "assets-folder": {
+      "iconPath": "./assets-folder.svg"
+    },
+    "assets-folder-open": {
+      "iconPath": "./assets-folder-open.svg"
+    },
+    "build-folder": {
+      "iconPath": "./build-folder.svg"
+    },
+    "build-folder-open": {
+      "iconPath": "./build-folder-open.svg"
+    },
+    "c": {
+      "iconPath": "./c.svg"
+    },
+    "components-folder": {
+      "iconPath": "./components-folder.svg"
+    },
+    "components-folder-open": {
+      "iconPath": "./components-folder-open.svg"
+    },
+    "config": {
+      "iconPath": "./config.svg"
+    },
+    "config-folder": {
+      "iconPath": "./config-folder.svg"
+    },
+    "config-folder-open": {
+      "iconPath": "./config-folder-open.svg"
+    },
+    "cpp": {
+      "iconPath": "./cpp.svg"
+    },
+    "csharp": {
+      "iconPath": "./csharp.svg"
+    },
+    "data-folder": {
+      "iconPath": "./data-folder.svg"
+    },
+    "data-folder-open": {
+      "iconPath": "./data-folder-open.svg"
+    },
+    "file": {
+      "iconPath": "./file.svg"
+    },
+    "folder": {
+      "iconPath": "./folder.svg"
+    },
+    "folder-open": {
+      "iconPath": "./folder-open.svg"
+    },
+    "git": {
+      "iconPath": "./git.svg"
+    },
+    "go": {
+      "iconPath": "./go.svg"
+    },
+    "gradle": {
+      "iconPath": "./gradle.svg"
+    },
+    "gradle-folder": {
+      "iconPath": "./gradle-folder.svg"
+    },
+    "gradle-folder-open": {
+      "iconPath": "./gradle-folder-open.svg"
+    },
+    "header": {
+      "iconPath": "./header.svg"
+    },
+    "image": {
+      "iconPath": "./image.svg"
+    },
+    "java": {
+      "iconPath": "./java.svg"
+    },
+    "java-folder": {
+      "iconPath": "./java-folder.svg"
+    },
+    "java-folder-open": {
+      "iconPath": "./java-folder-open.svg"
+    },
+    "javascript": {
+      "iconPath": "./javascript.svg"
+    },
+    "javascriptreact": {
+      "iconPath": "./javascriptreact.svg"
+    },
+    "json": {
+      "iconPath": "./json.svg"
+    },
+    "kotlin": {
+      "iconPath": "./kotlin.svg"
+    },
+    "kotlin-folder": {
+      "iconPath": "./kotlin-folder.svg"
+    },
+    "kotlin-folder-open": {
+      "iconPath": "./kotlin-folder-open.svg"
+    },
+    "launch": {
+      "iconPath": "./launch.svg"
+    },
+    "lock": {
+      "iconPath": "./lock.svg"
+    },
+    "markdown": {
+      "iconPath": "./markdown.svg"
+    },
+    "markup": {
+      "iconPath": "./markup.svg"
+    },
+    "python": {
+      "iconPath": "./python.svg"
+    },
+    "resource-folder": {
+      "iconPath": "./resource-folder.svg"
+    },
+    "resource-folder-open": {
+      "iconPath": "./resource-folder-open.svg"
+    },
+    "root-folder": {
+      "iconPath": "./root-folder.svg"
+    },
+    "root-folder-open": {
+      "iconPath": "./root-folder-open.svg"
+    },
+    "rust": {
+      "iconPath": "./rust.svg"
+    },
+    "screens-folder": {
+      "iconPath": "./screens-folder.svg"
+    },
+    "screens-folder-open": {
+      "iconPath": "./screens-folder-open.svg"
+    },
+    "scripts-folder": {
+      "iconPath": "./scripts-folder.svg"
+    },
+    "scripts-folder-open": {
+      "iconPath": "./scripts-folder-open.svg"
+    },
+    "shell": {
+      "iconPath": "./shell.svg"
+    },
+    "source-folder": {
+      "iconPath": "./source-folder.svg"
+    },
+    "source-folder-open": {
+      "iconPath": "./source-folder-open.svg"
+    },
+    "style": {
+      "iconPath": "./style.svg"
+    },
+    "tasks": {
+      "iconPath": "./tasks.svg"
+    },
+    "test-folder": {
+      "iconPath": "./test-folder.svg"
+    },
+    "test-folder-open": {
+      "iconPath": "./test-folder-open.svg"
+    },
+    "theme-folder": {
+      "iconPath": "./theme-folder.svg"
+    },
+    "theme-folder-open": {
+      "iconPath": "./theme-folder-open.svg"
+    },
+    "typescript": {
+      "iconPath": "./typescript.svg"
+    },
+    "typescriptreact": {
+      "iconPath": "./typescriptreact.svg"
+    },
+    "ui-folder": {
+      "iconPath": "./ui-folder.svg"
+    },
+    "ui-folder-open": {
+      "iconPath": "./ui-folder-open.svg"
+    },
+    "util-folder": {
+      "iconPath": "./util-folder.svg"
+    },
+    "util-folder-open": {
+      "iconPath": "./util-folder-open.svg"
+    },
+    "yaml": {
+      "iconPath": "./yaml.svg"
+    }
+  },
+  "file": "file",
+  "folder": "folder",
+  "folderExpanded": "folder-open",
+  "rootFolder": "root-folder",
+  "rootFolderExpanded": "root-folder-open",
+  "folderNames": {
+    "src": "source-folder",
+    "main": "source-folder",
+    "commonmain": "source-folder",
+    "lib": "source-folder",
+    "include": "source-folder",
+    "source": "source-folder",
+    "sources": "source-folder",
+    "app": "android-folder",
+    "android": "android-folder",
+    "ui": "ui-folder",
+    "views": "ui-folder",
+    "view": "ui-folder",
+    "screens": "screens-folder",
+    "screen": "screens-folder",
+    "pages": "screens-folder",
+    "components": "components-folder",
+    "widgets": "components-folder",
+    "composables": "components-folder",
+    "data": "data-folder",
+    "database": "data-folder",
+    "databases": "data-folder",
+    "model": "data-folder",
+    "models": "data-folder",
+    "domain": "data-folder",
+    "repository": "data-folder",
+    "repositories": "data-folder",
+    "storage": "data-folder",
+    "theme": "theme-folder",
+    "themes": "theme-folder",
+    "styles": "theme-folder",
+    "style": "theme-folder",
+    "config": "config-folder",
+    ".vscode": "config-folder",
+    ".idea": "config-folder",
+    ".settings": "config-folder",
+    "build": "build-folder",
+    ".gradle": "build-folder",
+    ".kotlin": "build-folder",
+    "out": "build-folder",
+    "bin": "build-folder",
+    "obj": "build-folder",
+    ".cache": "build-folder",
+    ".dart_tool": "build-folder",
+    "res": "resource-folder",
+    "resources": "resource-folder",
+    "drawable": "resource-folder",
+    "mipmap": "resource-folder",
+    "values": "resource-folder",
+    "layout": "resource-folder",
+    "xml": "resource-folder",
+    "font": "resource-folder",
+    "raw": "resource-folder",
+    "assets": "assets-folder",
+    "public": "assets-folder",
+    "images": "assets-folder",
+    "image": "assets-folder",
+    "icons": "assets-folder",
+    "media": "assets-folder",
+    "kotlin": "kotlin-folder",
+    "java": "java-folder",
+    "gradle": "gradle-folder",
+    "test": "test-folder",
+    "tests": "test-folder",
+    "androidtest": "test-folder",
+    "unittest": "test-folder",
+    "__tests__": "test-folder",
+    "util": "util-folder",
+    "utils": "util-folder",
+    "helpers": "util-folder",
+    "extensions": "util-folder",
+    "scripts": "scripts-folder",
+    "tools": "scripts-folder"
+  },
+  "folderNamesExpanded": {
+    "src": "source-folder-open",
+    "main": "source-folder-open",
+    "commonmain": "source-folder-open",
+    "lib": "source-folder-open",
+    "include": "source-folder-open",
+    "source": "source-folder-open",
+    "sources": "source-folder-open",
+    "app": "android-folder-open",
+    "android": "android-folder-open",
+    "ui": "ui-folder-open",
+    "views": "ui-folder-open",
+    "view": "ui-folder-open",
+    "screens": "screens-folder-open",
+    "screen": "screens-folder-open",
+    "pages": "screens-folder-open",
+    "components": "components-folder-open",
+    "widgets": "components-folder-open",
+    "composables": "components-folder-open",
+    "data": "data-folder-open",
+    "database": "data-folder-open",
+    "databases": "data-folder-open",
+    "model": "data-folder-open",
+    "models": "data-folder-open",
+    "domain": "data-folder-open",
+    "repository": "data-folder-open",
+    "repositories": "data-folder-open",
+    "storage": "data-folder-open",
+    "theme": "theme-folder-open",
+    "themes": "theme-folder-open",
+    "styles": "theme-folder-open",
+    "style": "theme-folder-open",
+    "config": "config-folder-open",
+    ".vscode": "config-folder-open",
+    ".idea": "config-folder-open",
+    ".settings": "config-folder-open",
+    "build": "build-folder-open",
+    ".gradle": "build-folder-open",
+    ".kotlin": "build-folder-open",
+    "out": "build-folder-open",
+    "bin": "build-folder-open",
+    "obj": "build-folder-open",
+    ".cache": "build-folder-open",
+    ".dart_tool": "build-folder-open",
+    "res": "resource-folder-open",
+    "resources": "resource-folder-open",
+    "drawable": "resource-folder-open",
+    "mipmap": "resource-folder-open",
+    "values": "resource-folder-open",
+    "layout": "resource-folder-open",
+    "xml": "resource-folder-open",
+    "font": "resource-folder-open",
+    "raw": "resource-folder-open",
+    "assets": "assets-folder-open",
+    "public": "assets-folder-open",
+    "images": "assets-folder-open",
+    "image": "assets-folder-open",
+    "icons": "assets-folder-open",
+    "media": "assets-folder-open",
+    "kotlin": "kotlin-folder-open",
+    "java": "java-folder-open",
+    "gradle": "gradle-folder-open",
+    "test": "test-folder-open",
+    "tests": "test-folder-open",
+    "androidtest": "test-folder-open",
+    "unittest": "test-folder-open",
+    "__tests__": "test-folder-open",
+    "util": "util-folder-open",
+    "utils": "util-folder-open",
+    "helpers": "util-folder-open",
+    "extensions": "util-folder-open",
+    "scripts": "scripts-folder-open",
+    "tools": "scripts-folder-open"
+  },
+  "fileExtensions": {
+    "ts": "typescript",
+    "mts": "typescript",
+    "cts": "typescript",
+    "tsx": "typescriptreact",
+    "js": "javascript",
+    "mjs": "javascript",
+    "cjs": "javascript",
+    "jsx": "javascriptreact",
+    "json": "json",
+    "jsonc": "json",
+    "yaml": "yaml",
+    "yml": "yaml",
+    "toml": "yaml",
+    "kt": "kotlin",
+    "kts": "kotlin",
+    "java": "java",
+    "class": "java",
+    "jar": "java",
+    "gradle": "gradle",
+    "cpp": "cpp",
+    "cc": "cpp",
+    "cxx": "cpp",
+    "c++": "cpp",
+    "c": "c",
+    "h": "header",
+    "hpp": "header",
+    "hxx": "header",
+    "hh": "header",
+    "cs": "csharp",
+    "csx": "csharp",
+    "py": "python",
+    "pyi": "python",
+    "pyw": "python",
+    "ipynb": "python",
+    "md": "markdown",
+    "mdx": "markdown",
+    "rst": "markdown",
+    "txt": "markdown",
+    "html": "markup",
+    "htm": "markup",
+    "xml": "markup",
+    "vue": "markup",
+    "svelte": "markup",
+    "xaml": "markup",
+    "css": "style",
+    "scss": "style",
+    "sass": "style",
+    "less": "style",
+    "png": "image",
+    "jpg": "image",
+    "jpeg": "image",
+    "gif": "image",
+    "svg": "image",
+    "webp": "image",
+    "ico": "image",
+    "avif": "image",
+    "sh": "shell",
+    "zsh": "shell",
+    "bash": "shell",
+    "fish": "shell",
+    "ps1": "shell",
+    "bat": "shell",
+    "cmd": "shell",
+    "ini": "config",
+    "conf": "config",
+    "config": "config",
+    "env": "config",
+    "properties": "config",
+    "editorconfig": "config",
+    "lock": "lock",
+    "go": "go",
+    "rs": "rust"
+  },
+  "fileNames": {
+    "androidmanifest.xml": "android",
+    "launch.json": "launch",
+    "tasks.json": "tasks",
+    "build.gradle": "gradle",
+    "build.gradle.kts": "gradle",
+    "settings.gradle": "gradle",
+    "settings.gradle.kts": "gradle",
+    "libs.versions.toml": "gradle",
+    "gradle.properties": "gradle",
+    "gradlew": "gradle",
+    "gradlew.bat": "gradle",
+    "gradle-wrapper.properties": "gradle",
+    ".gitignore": "git",
+    ".gitattributes": "git",
+    ".gitmodules": "git",
+    ".gitconfig": "git",
+    ".editorconfig": "config",
+    ".env": "config",
+    "dockerfile": "config",
+    "cmakelists.txt": "cpp",
+    "cmakepresets.json": "cpp",
+    "vcpkg.json": "cpp",
+    ".clang-format": "cpp",
+    ".clang-tidy": "cpp",
+    "license": "markdown",
+    "readme": "markdown",
+    "package-lock.json": "lock",
+    "pnpm-lock.yaml": "lock",
+    "yarn.lock": "lock",
+    "uv.lock": "lock",
+    "poetry.lock": "lock"
+  },
+  "languageIds": {
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact",
+    "javascript": "javascript",
+    "javascriptreact": "javascriptreact",
+    "python": "python",
+    "kotlin": "kotlin",
+    "java": "java",
+    "gradle": "gradle",
+    "c": "c",
+    "cpp": "cpp",
+    "csharp": "csharp",
+    "go": "go",
+    "rust": "rust",
+    "markdown": "markdown",
+    "json": "json",
+    "jsonc": "json",
+    "yaml": "yaml",
+    "toml": "yaml",
+    "shellscript": "shell",
+    "css": "style",
+    "scss": "style",
+    "html": "markup",
+    "xml": "markup"
+  }
+}

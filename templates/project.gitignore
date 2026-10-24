@@ -1,0 +1,15 @@
+# Project-local dependencies and generated outputs
+/build/
+/.venv/
+/node_modules/
+/.gradle/
+/.kotlin/
+**/__pycache__/
+**/obj/
+**/bin/
+/vcpkg_installed/
+/local.properties
+/CMakeUserPresets.json
+.env
+.env.*
+!.env.example

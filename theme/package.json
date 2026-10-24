@@ -1,0 +1,36 @@
+{
+  "name": "lantern-district",
+  "displayName": "Lantern District",
+  "description": "Don's midnight city: navy, electric cyan and lantern amber. Original color and file icon themes.",
+  "version": "1.2.0",
+  "publisher": "donvo",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "midnight",
+    "navy",
+    "cyan",
+    "amber"
+  ],
+  "license": "MIT",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Lantern District",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lantern-district-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "lantern-district-icons",
+        "label": "Lantern District Icons",
+        "path": "./icons/lantern-district-icon-theme.json"
+      }
+    ]
+  }
+}

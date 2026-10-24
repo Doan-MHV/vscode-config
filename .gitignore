@@ -1,0 +1,13 @@
+# Local backups, generated archives and machine overrides
+.local/
+local-settings.json
+__pycache__/
+*.py[cod]
+*.vsix
+*.zip
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
