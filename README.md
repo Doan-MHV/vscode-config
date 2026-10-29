@@ -2,8 +2,8 @@
 
 A minimal, portable **Antigravity IDE** (and VS Code) setup for Windows, macOS, and Linux:
 - **Lantern District `1.4.0` Theme & Icons**: Golden-hour twilight indigo (`#181726`, `#13121F`), sunset apricot (`#F2A365`), soft lavender (`#C4A7E7`), periwinkle (`#89B4FA`), coral (`#F28FAD`), and teal (`#8BD5CA`) syntax hierarchy, plus 66 centered `20×20` SVG file & folder icons.
-- **Minimal UI**: Top activity bar, single-tab focus mode, hidden scrollbars/minimap, `16px` Cascadia Code across editor, command palette, and Explorer labels, smooth phase block cursor, and inline Error Lens diagnostics.
-- **Languages Included**: C/C++ (`clangd` + CMake + LLDB), Python (`Pyrefly` + `Ruff` + `debugpy`), C# (`DotRush`), JS/TS (`Prettier` + `ESLint`), and Vim keybindings (Java/Android/Gradle excluded).
+- **Minimal UI**: Top activity bar, single-tab focus mode, clean 8px scrollbars without minimap, `16px` Cascadia Code across editor, command palette, and Explorer labels, smooth phase block cursor, and inline Error Lens diagnostics.
+- **Languages Included**: C/C++ (`clangd` + CMake + LLDB), Python (`Pyrefly` + `Ruff` + `debugpy`), C# (`DotRush`), and JS/TS (`Prettier` + `ESLint`) (Java/Android/Gradle/Vim excluded).
 
 ## Install on Windows
 

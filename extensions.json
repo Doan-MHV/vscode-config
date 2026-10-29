@@ -11,7 +11,6 @@
     "ms-dotnettools.vscode-dotnet-runtime",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "usernamehw.errorlens",
-    "vscodevim.vim"
+    "usernamehw.errorlens"
   ]
 }
