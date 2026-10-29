@@ -2,7 +2,7 @@
   "name": "lantern-district",
   "displayName": "Lantern District",
   "description": "Don's midnight city: navy, electric cyan and lantern amber. Original color and file icon themes.",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "publisher": "donvo",
   "engines": {
     "vscode": "^1.100.0"

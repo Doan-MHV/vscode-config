@@ -22,7 +22,7 @@
 .monaco-workbench .part.titlebar .window-title {
   font-family: var(--lantern-ui-font) !important;
   font-size: 13px;
-  color: #9AAFC5;
+  color: #A59EB8;
 }
 
 /* A lantern marks the current file; other tabs remain quiet. */
@@ -32,12 +32,12 @@
 }
 
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab:hover {
-  background: #7DDCE90A !important;
+  background: #C4A7E712 !important;
 }
 
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active {
-  background: linear-gradient(100deg, #F2AB7922, #7DDCE910 75%, #7DDCE906) !important;
-  box-shadow: inset 2px 0 #F2AB79;
+  background: linear-gradient(100deg, #F2A36526, #C4A7E714 75%, #C4A7E708) !important;
+  box-shadow: inset 2px 0 #F2A365;
 }
 
 .monaco-workbench .part.editor .tab .tab-label .label-name {
@@ -49,19 +49,19 @@
 .monaco-workbench .part.editor .tab .tab-label .label-description {
   font-family: var(--lantern-ui-font) !important;
   font-size: 12px !important;
-  color: #70839D !important;
+  color: #8880A3 !important;
 }
 
 .monaco-workbench .part.editor .tab.active .tab-label .label-name {
-  color: #F4DFC2 !important;
+  color: #F7E5CE !important;
 }
 
 .monaco-workbench .part.editor .tab:focus-visible {
-  outline: 1px solid #7DDCE9 !important;
+  outline: 1px solid #F2A365 !important;
   outline-offset: -1px;
 }
 
-/* Panel tabs match the cyan pool of light in the top navigation. */
+/* Panel tabs match the warm twilight pool of light in the top navigation. */
 .monaco-workbench .part.panel > .title .composite-bar .action-item .action-label:not(.codicon) {
   font-family: var(--lantern-ui-font) !important;
   font-size: 13px !important;
@@ -71,11 +71,11 @@
 
 .monaco-workbench .part.panel > .title .composite-bar .action-item.checked {
   border-radius: 6px;
-  background: linear-gradient(105deg, #7DDCE91B, #7DDCE906);
+  background: linear-gradient(105deg, #F2A36524, #C4A7E710);
 }
 
 .monaco-workbench .part.panel > .title .composite-bar .action-item.checked .action-label {
-  color: #9DEAF2 !important;
+  color: #F7D1A8 !important;
 }
 
 .monaco-workbench .part.panel > .title .composite-bar .action-item.checked .active-item-indicator::before {
@@ -83,7 +83,7 @@
 }
 
 .monaco-workbench .part.panel > .title .composite-bar .action-item:focus-visible {
-  outline: 1px solid #7DDCE9 !important;
+  outline: 1px solid #F2A365 !important;
   outline-offset: -1px;
   border-radius: 6px;
 }
@@ -91,7 +91,7 @@
 .monaco-workbench .part.sidebar .pane-header .title,
 .monaco-workbench .part.auxiliarybar .pane-header .title {
   font-family: var(--lantern-ui-font) !important;
-  color: #C4AF94;
+  color: #EBC47A;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.4px;
@@ -105,11 +105,11 @@
 }
 
 .monaco-workbench .part.statusbar .statusbar-item:hover > .statusbar-item-label {
-  background: #7DDCE912;
+  background: #C4A7E716;
 }
 
 .monaco-workbench .part.statusbar .statusbar-item-label:focus-visible {
-  outline: 1px solid #7DDCE9;
+  outline: 1px solid #F2A365;
   outline-offset: -1px;
 }
 
@@ -122,11 +122,11 @@
 
 .monaco-workbench .monaco-inputbox.synthetic-focus,
 .monaco-workbench .monaco-inputbox:focus-within {
-  box-shadow: inset 0 0 0 1px #7DDCE960;
+  box-shadow: inset 0 0 0 1px #F2A36570;
 }
 
 .monaco-workbench .monaco-text-button.secondary:hover {
-  background: #26394D !important;
+  background: #332E4D !important;
 }
 
 .monaco-workbench .quick-input-widget,
@@ -145,12 +145,12 @@
 
 .monaco-workbench .quick-input-widget .monaco-list-row.focused,
 .monaco-workbench .monaco-editor .suggest-widget .monaco-list-row.focused {
-  background: linear-gradient(90deg, #F2AB7922, #7DDCE914) !important;
-  box-shadow: inset 2px 0 #F2AB79;
+  background: linear-gradient(90deg, #F2A36526, #C4A7E716) !important;
+  box-shadow: inset 2px 0 #F2A365;
 }
 
 .monaco-workbench .monaco-menu .action-item.focused {
-  background: #7DDCE914;
+  background: #C4A7E718;
 }
 
 .monaco-workbench .monaco-hover .hover-contents {
@@ -183,9 +183,9 @@
 }
 
 .monaco-workbench .settings-editor .settings-group-title-label {
-  color: #E8C18F;
+  color: #F2A365;
 }
 
 .monaco-workbench .monaco-editor .cursors-layer .cursor {
-  box-shadow: 0 0 8px #7DDCE92E;
+  box-shadow: 0 0 8px #F2A36538;
 }

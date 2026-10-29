@@ -35,13 +35,13 @@
 
 /* Midnight dispatch: native 22px tree rows, no extra gaps or separators. */
 .monaco-workbench .part.sidebar .explorer-folders-view {
-  background-image: radial-gradient(ellipse at 0 0, #7DDCE908, transparent 55%);
+  background-image: radial-gradient(ellipse at 0 0, #F2A36510, transparent 58%);
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-icon-label .label-name,
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-icon-label .label-description {
   font-family: 'Cascadia Code', 'JetBrains Mono', Menlo, monospace !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   letter-spacing: -0.15px;
   font-variant-ligatures: common-ligatures contextual;
 }
@@ -51,12 +51,14 @@
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-tl-twistie {
-  color: #60758E;
+  color: #7E7796;
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-icon-label::before {
-  background-size: 18px !important;
-  width: 18px !important;
+  background-size: 20px !important;
+  width: 20px !important;
+  height: 22px !important;
+  background-position: center !important;
   padding-right: 7px;
 }
 
@@ -73,29 +75,29 @@
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row:hover .explorer-item {
-  background-color: #7DDCE908;
+  background-color: #C4A7E710;
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.selected .explorer-item {
-  background: linear-gradient(90deg, #F2AB7924, #7DDCE912 72%, #7DDCE906);
-  box-shadow: inset 2px 0 #F2AB79;
+  background: linear-gradient(90deg, #F2A36529, #C4A7E714 72%, #C4A7E706);
+  box-shadow: inset 2px 0 #F2A365;
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.selected .label-name {
-  color: #F4DFC2 !important;
+  color: #F7E5CE !important;
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.focused:not(.selected) .explorer-item {
-  background-color: #7DDCE910;
-  box-shadow: inset 2px 0 #7DDCE9;
+  background-color: #C4A7E714;
+  box-shadow: inset 2px 0 #C4A7E7;
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-list:focus .monaco-list-row.focused.selected .explorer-item {
-  box-shadow: inset 2px 0 #7DDCE9;
+  box-shadow: inset 2px 0 #F2A365;
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-list-row.selected .monaco-tl-twistie {
-  color: #F2AB79;
+  color: #F2A365;
 }
 
 /* A small lantern light identifies the workspace; the actual name stays intact. */
@@ -104,7 +106,7 @@
   font-size: 12px !important;
   font-weight: 600;
   letter-spacing: 1.15px;
-  color: #E8C18F;
+  color: #F2A365;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -116,15 +118,15 @@
   height: 5px;
   flex: 0 0 5px;
   border-radius: 50%;
-  background-color: #F2AB79;
-  box-shadow: 0 0 7px #F2AB7955;
+  background-color: #F2A365;
+  box-shadow: 0 0 7px #F2A36566;
 }
 
 .monaco-workbench .part.sidebar > .title .title-actions .action-label {
-  color: #6F849D;
+  color: #8880A3;
 }
 
-/* Top navigation uses a quiet pool of cyan light instead of an underline. */
+/* Top navigation uses a warm sunset/twilight pool of light instead of an underline. */
 .monaco-workbench .part.sidebar .composite-bar .action-item.checked .active-item-indicator {
   position: absolute;
   left: 3px !important;
@@ -135,7 +137,7 @@
   height: auto !important;
   transform: none !important;
   border-radius: 7px;
-  background: linear-gradient(145deg, #7DDCE923, #7DDCE907);
+  background: linear-gradient(145deg, #F2A36529, #C4A7E712);
   pointer-events: none;
 }
 
@@ -144,14 +146,14 @@
 }
 
 .monaco-workbench .part.sidebar .composite-bar .action-item:focus-visible .active-item-indicator {
-  outline: 1px solid #7DDCE9;
+  outline: 1px solid #F2A365;
   outline-offset: -1px;
 }
 
 .monaco-workbench .part.sidebar .composite-bar .action-item.checked .action-label {
-  color: #9DEAF2 !important;
+  color: #F7D1A8 !important;
 }
 
 .monaco-workbench .part.sidebar .composite-bar .action-item.checked .action-label::before {
-  text-shadow: 0 0 8px #7DDCE940;
+  text-shadow: 0 0 8px #F2A36545;
 }

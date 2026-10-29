@@ -1,20 +1,17 @@
 {
   "recommendations": [
-    "ms-vscode.cpptools",
+    "llvm-vs-code-extensions.vscode-clangd",
     "ms-vscode.cmake-tools",
+    "vadimcn.vscode-lldb",
     "ms-python.python",
-    "ms-python.vscode-pylance",
     "ms-python.debugpy",
+    "meta.pyrefly",
     "charliermarsh.ruff",
-    "ms-dotnettools.csdevkit",
-    "ms-dotnettools.csharp",
+    "nromanov.dotrush",
+    "ms-dotnettools.vscode-dotnet-runtime",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "JetBrains.kotlin-server",
-    "redhat.java",
-    "vscjava.vscode-gradle",
-    "vscjava.vscode-java-debug",
-    "nisargjhaveri.android-debug",
-    "AshishKumarD.logcat-lens"
+    "usernamehw.errorlens",
+    "vscodevim.vim"
   ]
 }

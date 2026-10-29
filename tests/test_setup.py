@@ -165,22 +165,22 @@ class TemporaryProfileTests(unittest.TestCase):
 class PlatformTests(unittest.TestCase):
     def test_windows_settings_uses_appdata(self):
         with patch.object(setup.sys, 'platform', 'win32'), patch.dict(os.environ, {'APPDATA': '/fixture/Roaming'}):
-            self.assertEqual(setup.settings_path(), Path('/fixture/Roaming/Code/User/settings.json'))
+            self.assertEqual(setup.settings_path(), Path('/fixture/Roaming/Antigravity IDE/User/settings.json'))
 
     def test_linux_settings_uses_xdg(self):
         with patch.object(setup.sys, 'platform', 'linux'), patch.dict(os.environ, {'XDG_CONFIG_HOME': '/fixture/config'}):
-            self.assertEqual(setup.settings_path(), Path('/fixture/config/Code/User/settings.json'))
+            self.assertEqual(setup.settings_path(), Path('/fixture/config/Antigravity IDE/User/settings.json'))
 
     def test_windows_launcher_uses_electron_without_shell(self):
         with tempfile.TemporaryDirectory() as temporary:
-            app = Path(temporary) / 'Microsoft VS Code'
+            app = Path(temporary) / 'Antigravity IDE'
             (app / 'bin').mkdir(parents=True)
             (app / 'resources/app/out').mkdir(parents=True)
-            for path in [app/'bin/code.cmd', app/'Code.exe', app/'resources/app/out/cli.js']:
+            for path in [app/'bin/antigravity-ide.cmd', app/'Antigravity IDE.exe', app/'resources/app/out/cli.js']:
                 path.touch()
             with patch.object(setup.sys, 'platform', 'win32'):
-                command, env = setup.code_command(str(app/'bin/code.cmd'))
-            self.assertEqual(command, [str((app/'Code.exe').resolve()), str((app/'resources/app/out/cli.js').resolve())])
+                command, env = setup.code_command(str(app/'bin/antigravity-ide.cmd'))
+            self.assertEqual(command, [str((app/'Antigravity IDE.exe').resolve()), str((app/'resources/app/out/cli.js').resolve())])
             self.assertEqual(env['ELECTRON_RUN_AS_NODE'], '1')
 
 

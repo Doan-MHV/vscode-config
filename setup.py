@@ -25,7 +25,10 @@ ROOT = Path(__file__).resolve().parent
 LOCAL = ROOT / ".local"
 BEGIN = "<!-- LANTERN_DISTRICT_POPUP_FONT_BEGIN -->"
 END = "<!-- LANTERN_DISTRICT_POPUP_FONT_END -->"
+AGY_BEGIN = "<!-- LANTERN_DISTRICT_ANTIGRAVITY_STYLE_BEGIN -->"
+AGY_END = "<!-- LANTERN_DISTRICT_ANTIGRAVITY_STYLE_END -->"
 STYLE_PATTERN = re.compile(re.escape(BEGIN) + r"[\s\S]*?" + re.escape(END) + r"\r?\n?")
+AGY_STYLE_PATTERN = re.compile(re.escape(AGY_BEGIN) + r"[\s\S]*?" + re.escape(AGY_END) + r"\r?\n?")
 
 
 def json_text(value):
@@ -225,12 +228,16 @@ def settings_path(override=None):
     if override:
         return Path(override).expanduser().resolve()
     if sys.platform == "win32":
-        appdata = Path(os.environ.get("APPDATA", Path.home() / "AppData/Roaming"))
-        return appdata / "Code/User/settings.json"
-    if sys.platform == "darwin":
-        return Path.home() / "Library/Application Support/Code/User/settings.json"
-    config = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config"))
-    return config / "Code/User/settings.json"
+        base = Path(os.environ.get("APPDATA", Path.home() / "AppData/Roaming"))
+    elif sys.platform == "darwin":
+        base = Path.home() / "Library/Application Support"
+    else:
+        base = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config"))
+    for folder in ("Antigravity IDE", "Antigravity", "Code"):
+        candidate = base / folder / "User/settings.json"
+        if candidate.exists() or (base / folder).exists():
+            return candidate
+    return base / "Antigravity IDE/User/settings.json"
 
 
 def backup_directory(label):
@@ -241,9 +248,35 @@ def backup_directory(label):
 
 
 def code_command(override=None):
-    found = override or shutil.which("code") or shutil.which("code.cmd")
+    found = override
     if not found:
-        raise ValueError("VS Code CLI not found. Add 'code' to PATH or pass --code PATH.")
+        for name in ("antigravity-ide", "antigravity-ide.cmd", "agy-ide", "agy-ide.cmd", "antigravity", "antigravity.cmd", "code", "code.cmd"):
+            found = shutil.which(name)
+            if found:
+                break
+    if not found:
+        fallback_candidates = []
+        if sys.platform == "win32":
+            bases = [Path(os.environ.get("LOCALAPPDATA", Path.home() / "AppData/Local")) / "Programs", Path(os.environ.get("PROGRAMFILES", "C:/Program Files"))]
+            for base in bases:
+                fallback_candidates.extend([
+                    base / "Antigravity IDE/bin/antigravity-ide.cmd",
+                    base / "Antigravity/bin/antigravity.cmd",
+                    base / "Microsoft VS Code/bin/code.cmd",
+                ])
+        elif sys.platform == "darwin":
+            for base in [Path("/Applications"), Path.home() / "Applications"]:
+                fallback_candidates.extend([
+                    base / "Antigravity IDE.app/Contents/Resources/app/bin/antigravity-ide",
+                    base / "Antigravity.app/Contents/Resources/app/bin/antigravity",
+                    base / "Visual Studio Code.app/Contents/Resources/app/bin/code",
+                ])
+        for path in fallback_candidates:
+            if path.is_file():
+                found = str(path)
+                break
+    if not found:
+        raise ValueError("Antigravity IDE / VS Code CLI not found. Add 'antigravity-ide' (or 'code') to PATH or pass --code PATH.")
     candidate = Path(found).expanduser()
     if not candidate.is_file():
         found = shutil.which(str(found))
@@ -256,10 +289,14 @@ def code_command(override=None):
         # Avoid cmd.exe and all shell interpolation. This is what the official
         # launcher does internally: run the vendor's CLI with its own Electron.
         install = candidate.parent.parent if candidate.suffix.lower() in {".cmd", ".bat"} else candidate.parent
-        executable = install / "Code.exe"
         cli = install / "resources/app/out/cli.js"
-        if not executable.is_file() or not cli.is_file():
-            raise ValueError("Cannot locate Code.exe/CLI beside this Windows launcher. Pass the standard Code.exe or bin/code.cmd path.")
+        executable = None
+        for exe_name in ("Antigravity IDE.exe", "Antigravity.exe", "Code.exe"):
+            if (install / exe_name).is_file():
+                executable = install / exe_name
+                break
+        if not executable or not cli.is_file():
+            raise ValueError("Cannot locate Antigravity IDE.exe / Code.exe and CLI beside this Windows launcher. Pass the standard executable or bin/*.cmd path.")
         env["ELECTRON_RUN_AS_NODE"] = "1"
         return [str(executable), str(cli)], env
     return [str(candidate)], env
@@ -389,37 +426,55 @@ def app_root(override=None):
     if override:
         candidates.append(Path(override).expanduser())
     else:
-        command = shutil.which("code") or shutil.which("code.cmd")
-        if command:
-            launcher = Path(command).resolve()
-            candidates.extend([launcher.parent.parent, launcher.parent.parent / "resources/app"])
+        for name in ("antigravity-ide", "antigravity-ide.cmd", "agy-ide", "agy-ide.cmd", "antigravity", "antigravity.cmd", "code", "code.cmd"):
+            command = shutil.which(name)
+            if command:
+                launcher = Path(command).resolve()
+                candidates.extend([launcher.parent.parent, launcher.parent.parent / "resources/app"])
         if sys.platform == "darwin":
-            candidates.extend(base / "Visual Studio Code.app/Contents/Resources/app" for base in [Path("/Applications"), Path.home() / "Applications"])
+            for base in [Path("/Applications"), Path.home() / "Applications"]:
+                candidates.extend([
+                    base / "Antigravity IDE.app/Contents/Resources/app",
+                    base / "Antigravity.app/Contents/Resources/app",
+                    base / "Visual Studio Code.app/Contents/Resources/app",
+                ])
         elif sys.platform == "win32":
             bases = [Path(os.environ.get("LOCALAPPDATA", Path.home() / "AppData/Local")) / "Programs", Path(os.environ.get("PROGRAMFILES", "C:/Program Files")), Path(os.environ.get("PROGRAMFILES(X86)", "C:/Program Files (x86)"))]
-            candidates.extend(base / "Microsoft VS Code/resources/app" for base in bases)
+            for base in bases:
+                candidates.extend([
+                    base / "Antigravity IDE/resources/app",
+                    base / "Antigravity/resources/app",
+                    base / "Microsoft VS Code/resources/app",
+                ])
         else:
-            candidates.extend(Path(base) / "resources/app" for base in ["/usr/share/code", "/usr/lib/code", "/opt/visual-studio-code", "/snap/code/current/usr/share/code"])
+            candidates.extend(Path(base) / "resources/app" for base in ["/usr/share/antigravity-ide", "/opt/antigravity-ide", "/usr/share/code", "/usr/lib/code", "/opt/visual-studio-code", "/snap/code/current/usr/share/code"])
+    allowed_identities = {
+        ("Antigravity IDE", "antigravity-ide", "Antigravity IDE"),
+        ("Antigravity", "antigravity", "Antigravity"),
+        ("Code", "code", "Visual Studio Code"),
+    }
     for candidate in candidates:
         try:
             package = json.loads((candidate / "package.json").read_text(encoding="utf-8"))
             product = json.loads((candidate / "product.json").read_text(encoding="utf-8"))
-            if package.get("name") != "Code" or product.get("applicationName") != "code" or product.get("nameLong") != "Visual Studio Code":
+            identity = (package.get("name"), product.get("applicationName"), product.get("nameLong"))
+            if identity not in allowed_identities:
                 continue
             target = candidate / "out/vs/code/electron-browser/workbench/workbench.html"
             if target.is_file():
                 return candidate.resolve(), target.resolve()
         except (OSError, ValueError):
             continue
-    raise ValueError("A verified VS Code Stable Resources/app folder was not found. Use --app-root PATH; other editors are not patched.")
+    raise ValueError("A verified Antigravity IDE (or VS Code) Resources/app folder was not found. Use --app-root PATH.")
 
 
 def strip_style(html):
-    if html.count(BEGIN) != html.count(END) or html.count(BEGIN) > 1:
-        raise ValueError("Incomplete or duplicated style markers; app left unchanged.")
-    if BEGIN in html and html.index(BEGIN) > html.index(END):
-        raise ValueError("Invalid style marker order; app left unchanged.")
-    return STYLE_PATTERN.sub("", html)
+    for b, e in [(BEGIN, END), (AGY_BEGIN, AGY_END)]:
+        if html.count(b) != html.count(e) or html.count(b) > 1:
+            raise ValueError("Incomplete or duplicated style markers; app left unchanged.")
+        if b in html and html.index(b) > html.index(e):
+            raise ValueError("Invalid style marker order; app left unchanged.")
+    return AGY_STYLE_PATTERN.sub("", STYLE_PATTERN.sub("", html))
 
 
 def change_style(args, remove=False):
