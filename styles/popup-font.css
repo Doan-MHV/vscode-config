@@ -35,7 +35,7 @@
 
 /* Midnight dispatch: native 22px tree rows, no extra gaps or separators. */
 .monaco-workbench .part.sidebar .explorer-folders-view {
-  background-image: radial-gradient(ellipse at 0 0, #F2A36510, transparent 58%);
+  background-image: none;
 }
 
 .monaco-workbench .part.sidebar .explorer-folders-view .monaco-icon-label .label-name,
