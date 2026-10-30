@@ -1,0 +1,23 @@
+{
+  "name": "Lantern District",
+  "background": "#181726",
+  "foreground": "#ECE4DC",
+  "cursorColor": "#F2A365",
+  "selectionBackground": "#3A3154",
+  "black": "#221F35",
+  "red": "#E87D72",
+  "green": "#A9C799",
+  "yellow": "#F2A365",
+  "blue": "#89B4FA",
+  "purple": "#C4A7E7",
+  "cyan": "#8BD5CA",
+  "white": "#ECE4DC",
+  "brightBlack": "#726B8A",
+  "brightRed": "#F28FAD",
+  "brightGreen": "#B8D6A8",
+  "brightYellow": "#EBC47A",
+  "brightBlue": "#9AA7EC",
+  "brightPurple": "#D4BFFF",
+  "brightCyan": "#92C4D8",
+  "brightWhite": "#F7EFE6"
+}

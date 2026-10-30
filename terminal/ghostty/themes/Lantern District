@@ -1,0 +1,33 @@
+# Lantern District — Golden-hour twilight indigo & sunset apricot
+# Matches Antigravity IDE Lantern District 1.4.0 theme.
+
+background = #181726
+foreground = #ECE4DC
+
+cursor-color = #F2A365
+cursor-text = #13121F
+
+selection-background = #3A3154
+selection-foreground = #ECE4DC
+
+split-divider-color = #332F4D
+
+# Normal ANSI colors (0-7)
+palette = 0=#221F35
+palette = 1=#E87D72
+palette = 2=#A9C799
+palette = 3=#F2A365
+palette = 4=#89B4FA
+palette = 5=#C4A7E7
+palette = 6=#8BD5CA
+palette = 7=#ECE4DC
+
+# Bright ANSI colors (8-15)
+palette = 8=#726B8A
+palette = 9=#F28FAD
+palette = 10=#B8D6A8
+palette = 11=#EBC47A
+palette = 12=#9AA7EC
+palette = 13=#D4BFFF
+palette = 14=#92C4D8
+palette = 15=#F7EFE6

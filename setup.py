@@ -397,7 +397,33 @@ def install(args):
         print(f"Merged {len(changed)} preferences. Exact backup: {backup}")
     else:
         print("All preset preferences already match; no settings file was rewritten.")
-    print("Reload VS Code. Install your chosen code font separately. Optional CSS: python setup.py apply-style")
+    print("Reload Antigravity IDE / VS Code. Install your chosen code font separately. Optional CSS: python setup.py apply-style")
+    if getattr(args, "terminal", False):
+        install_terminal(args)
+
+
+def install_terminal(args):
+    config_root = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config"))
+    targets = [
+        (ROOT / "terminal/starship.toml", config_root / "starship.toml"),
+        (ROOT / "terminal/ghostty/config", config_root / "ghostty/config"),
+        (ROOT / "terminal/ghostty/themes/Lantern District", config_root / "ghostty/themes/Lantern District"),
+    ]
+    if args.dry_run:
+        for src, dst in targets:
+            if src.is_file():
+                print(f"Would install {src.relative_to(ROOT)} -> {dst}")
+        return
+    backup = backup_directory("terminal")
+    for src, dst in targets:
+        if not src.is_file():
+            continue
+        if dst.is_file():
+            saved = backup / dst.relative_to(config_root)
+            saved.parent.mkdir(parents=True, exist_ok=True)
+            saved.write_bytes(dst.read_bytes())
+        atomic_write(dst, src.read_bytes())
+    print(f"Installed Lantern District Starship & Ghostty configs to {config_root}. Backup: {backup}")
 
 
 def restore(args):
@@ -528,7 +554,10 @@ def main(argv=None):
     install_parser.add_argument("--settings", help="Alternate VS Code User/settings.json path.")
     install_parser.add_argument("--code", help="Official VS Code CLI path, if code is not on PATH.")
     install_parser.add_argument("--extensions", action="store_true", help="Also install developer extension recommendations.")
+    install_parser.add_argument("--terminal", action="store_true", help="Also install Starship and Ghostty Lantern District configs.")
     install_parser.add_argument("--dry-run", action="store_true", help="Validate and show planned changes without writing or installing.")
+    terminal_parser = commands.add_parser("install-terminal", help="Install Starship and Ghostty Lantern District configs.")
+    terminal_parser.add_argument("--dry-run", action="store_true")
     restore_parser = commands.add_parser("restore", help="Restore preferences that still match the last applied values.")
     restore_parser.add_argument("--settings", help="Override the settings target recorded in the backup.")
     restore_parser.add_argument("--backup", help="Specific settings backup folder; default is latest install backup.")
@@ -546,6 +575,8 @@ def main(argv=None):
         restore(args)
     elif args.command == "build-theme":
         theme_package(args.dry_run)
+    elif args.command == "install-terminal":
+        install_terminal(args)
     else:
         change_style(args, remove=args.command == "remove-style")
 

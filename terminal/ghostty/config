@@ -1,0 +1,46 @@
+# To generate a new list of the default values:
+# ghostty +show-config --default --docs > ~/.config/ghostty/config-default
+#
+# Online documentation:
+# https://ghostty.org/docs/config/reference
+
+theme = Lantern District
+
+# Font settings
+# List available fonts: ghostty +list-fonts
+font-family = Cascadia Code NF
+font-size = 16
+# font-thicken = true
+# Extra vertical space between terminal rows for easier code reading.
+adjust-cell-height = 10
+
+# Cursor settings
+cursor-style = block
+shell-integration-features = no-cursor
+
+# Window settings
+window-padding-x = 7
+window-padding-y = 0
+window-padding-balance = true
+window-width = 140
+window-height = 35
+window-save-state = always
+
+# Split navigation
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+
+# Split resizing
+keybind = super+ctrl+down=resize_split:down,100
+keybind = super+ctrl+left=resize_split:left,100
+keybind = super+ctrl+up=resize_split:up,100
+keybind = super+ctrl+right=resize_split:right,100
+
+# Reload config
+keybind = super+shift+comma=reload_config
+
+# Load optional local overrides if present (keybinds, fonts, theme).
+# The `?` prefix makes this a no-op when the file doesn't exist.
+config-file = ?~/.config/ghostty/config.local

@@ -1,0 +1,129 @@
+# REFERENCE:
+# https://starship.rs/config/
+# https://www.nerdfonts.com/cheat-sheet
+# Theme: Lantern District (matches Antigravity IDE 1.4.0 palette & icon colors)
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "lantern_district"
+add_newline = false
+command_timeout = 2000
+
+[palettes.lantern_district]
+bg = "#181726"
+ink = "#13121F"
+raised = "#211F33"
+border = "#332F4D"
+text = "#ECE4DC"
+muted = "#A59EB8"
+quiet = "#726B8A"
+amber = "#F2A365"
+gold = "#EBC47A"
+lavender = "#C4A7E7"
+blue = "#89B4FA"
+indigo = "#9AA7EC"
+teal = "#8BD5CA"
+cyan = "#92C4D8"
+coral = "#F28FAD"
+red = "#E87D72"
+green = "#A9C799"
+
+[character]
+success_symbol = "[❯](bold amber)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold lavender)"
+
+[package]
+disabled = true
+
+[directory]
+style = "bold amber"
+read_only = " 󰌾"
+read_only_style = "gold"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+style = "bold lavender"
+symbol = "󰘬 "
+
+[git_status]
+format = '([\[$all_status$ahead_behind \]]($style) )'
+ahead = " [](lavender)[$count](text)"
+behind = " [](teal)[$count](text)"
+conflicted = ' [=$count](gold)'
+deleted = ' [✘$count](quiet)'
+diverged = " [](teal)[$ahead_count](text)[](lavender)[$behind_count](text)"
+modified = ' [*$count](coral)'
+renamed = " [»$count](lavender)"
+staged = " [+$count](green)"
+stashed = " [\\$$count](gold)"
+style = "bold muted"
+untracked = " [?$count](teal)"
+
+[git_commit]
+only_detached = true
+style = "quiet"
+format = "[$hash]($style) "
+
+[cmd_duration]
+min_time = 2000
+style = "bold gold"
+format = "[󱦟 $duration]($style) "
+
+# Language & tool icons matched to Lantern District Explorer icon colors
+[c]
+symbol = " "
+style = "bold indigo"
+
+[cpp]
+symbol = " "
+style = "bold indigo"
+
+[cmake]
+symbol = " "
+style = "bold indigo"
+
+[dotnet]
+symbol = "󰪮 "
+style = "bold lavender"
+
+[python]
+symbol = "󰌠 "
+style = "bold gold"
+
+[nodejs]
+symbol = "󰎙 "
+style = "bold green"
+
+[golang]
+symbol = " "
+style = "bold cyan"
+
+[rust]
+symbol = "󱘗 "
+style = "bold amber"
+
+[kotlin]
+symbol = " "
+style = "bold lavender"
+
+[java]
+symbol = " "
+style = "bold amber"
+
+[gradle]
+symbol = " "
+style = "bold green"
+
+[lua]
+symbol = " "
+style = "bold blue"
+
+[ruby]
+symbol = " "
+style = "bold red"
+
+[docker_context]
+symbol = "󰡨 "
+style = "bold cyan"

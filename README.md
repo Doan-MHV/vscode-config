@@ -16,9 +16,18 @@ git clone https://github.com/Doan-MHV/vscode-config.git
 cd vscode-config
 py setup.py install --extensions --dry-run
 py setup.py install --extensions
+py setup.py install-terminal
 ```
 
 On macOS/Linux, use `python3` instead of `py`. The installer automatically locates your local **Antigravity IDE** User `settings.json` (`%APPDATA%\Antigravity IDE\User\settings.json` on Windows) and CLI (`antigravity-ide` / `agy-ide`), backs up your existing settings, merges only the shared preferences, and builds/installs the local `lantern-district` VSIX theme. Run `py setup.py --help` for all options.
+
+## Terminal & Starship Setup (`terminal/`)
+
+The `terminal/` directory bundles the matching **Lantern District** terminal and prompt configs:
+- `terminal/starship.toml` — Starship prompt palette and Nerd Font language/git icons matching Antigravity IDE's Explorer icon colors (`py setup.py install-terminal` installs it to `~/.config/starship.toml`).
+- `terminal/ghostty/config` & `terminal/ghostty/themes/Lantern District` — Ghostty terminal configuration and custom theme (`py setup.py install-terminal` installs both to `~/.config/ghostty/`).
+- `terminal/windows-terminal-scheme.json` — Ready-to-use `Lantern District` color scheme for **Windows Terminal** (`settings.json` → `"schemes"`).
+- `terminal/zsh/colors.zsh` — Zsh syntax highlighting and `EZA_COLORS` (`eza --icons=auto`) matching Lantern District file and folder icon colors.
 
 ## Apply the Explorer & Popup Styling (Optional CSS Patch)
 
